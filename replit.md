@@ -1,6 +1,6 @@
-# [Project name]
+# السليماني للحديد — موقع الشركة
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+موقع احترافي ثنائي اللغة (عربي/إنجليزي) لشركة السليماني للحديد في المملكة العربية السعودية، مبني بـ React + Vite.
 
 ## Run & Operate
 
