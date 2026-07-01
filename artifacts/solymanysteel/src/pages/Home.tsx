@@ -76,13 +76,17 @@ export const Home = () => {
               initial={{ opacity: 0, x: dir === 'rtl' ? -40 : 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="hidden lg:grid grid-cols-3 gap-3 h-[500px]"
+              className="hidden lg:flex gap-3 items-start"
+              style={{ height: '420px' }}
             >
               {heroPanels.map((panel, i) => (
                 <div
                   key={i}
-                  className="relative rounded-2xl overflow-hidden border border-border group"
-                  style={{ marginTop: i === 1 ? '40px' : i === 2 ? '20px' : '0' }}
+                  className="relative flex-1 rounded-2xl overflow-hidden border border-border group"
+                  style={{
+                    height: i === 0 ? '360px' : i === 1 ? '420px' : '390px',
+                    alignSelf: 'flex-end',
+                  }}
                 >
                   <img
                     src={panel.img}

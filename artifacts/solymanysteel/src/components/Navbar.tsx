@@ -58,23 +58,23 @@ export const Navbar = () => {
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="relative w-12 h-12 flex items-center justify-center bg-primary rounded-lg overflow-hidden group-hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+            <div className="relative w-14 h-14 flex items-center justify-center bg-primary rounded-xl overflow-hidden group-hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30 border border-primary/40">
               <img 
                 src={logoImg} 
                 alt="السليماني للحديد" 
-                className="w-10 h-10 object-contain"
+                className="w-12 h-12 object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML = '<span class="text-xl font-black text-white">SH</span>';
+                  e.currentTarget.parentElement!.innerHTML = '<span class="text-2xl font-black text-white">س</span>';
                 }}
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black tracking-tight text-white leading-none mb-1">
+              <span className="text-2xl font-black tracking-tight text-white leading-none mb-1 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 {language === 'ar' ? 'السليماني' : 'Al Solyymany'}
               </span>
               <span className="text-xs font-bold tracking-widest text-primary uppercase leading-none">
-                {language === 'ar' ? 'للحديد' : 'Iron'}
+                {language === 'ar' ? 'للحديد' : 'Steel'}
               </span>
             </div>
           </div>
