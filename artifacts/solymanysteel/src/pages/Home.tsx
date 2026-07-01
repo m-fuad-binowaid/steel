@@ -30,17 +30,17 @@ export const Home = () => {
       className="flex-1 flex flex-col bg-background"
     >
       {/* ─── Hero Section ─── */}
-      <section className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-[100dvh] flex flex-col justify-center pt-24 pb-20 overflow-hidden">
         {/* Full-bleed background */}
         <div className="absolute inset-0 bg-background z-0">
-          <img src={heroImg} alt="Hero" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+          <img src={heroImg} alt="Hero" className="w-full h-full object-cover opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent" />
         </div>
 
         <div className="container relative z-10 mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left / text */}
+            {/* Text block */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export const Home = () => {
               <h2 className="text-primary font-bold tracking-widest uppercase mb-6 text-sm md:text-base">
                 {t('hero.tagline')}
               </h2>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] mb-8 whitespace-pre-line">
+              <h1 className="text-5xl md:text-7xl lg:text-7xl font-black text-white leading-[1.1] mb-8 whitespace-pre-line">
                 {t('hero.title')}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-10">
@@ -71,22 +71,19 @@ export const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right / 3-panel image strip */}
+            {/* 3-panel image strip — fixed heights, no overflow */}
             <motion.div
               initial={{ opacity: 0, x: dir === 'rtl' ? -40 : 40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="hidden lg:flex gap-3 items-start"
-              style={{ height: '420px' }}
+              className="hidden lg:grid gap-3"
+              style={{ gridTemplateColumns: '1fr 1fr 1fr', height: '400px' }}
             >
               {heroPanels.map((panel, i) => (
                 <div
                   key={i}
-                  className="relative flex-1 rounded-2xl overflow-hidden border border-border group"
-                  style={{
-                    height: i === 0 ? '360px' : i === 1 ? '420px' : '390px',
-                    alignSelf: 'flex-end',
-                  }}
+                  className="relative rounded-2xl overflow-hidden border border-border group"
+                  style={{ marginTop: i === 0 ? '40px' : i === 2 ? '20px' : '0' }}
                 >
                   <img
                     src={panel.img}
@@ -94,7 +91,7 @@ export const Home = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-                  <div className="absolute bottom-4 left-3 right-3">
+                  <div className="absolute bottom-3 left-3 right-3">
                     <div className="w-6 h-0.5 bg-primary mb-1.5" />
                     <p className="text-white text-xs font-bold leading-tight">
                       {dir === 'rtl' ? panel.labelAr : panel.labelEn}
@@ -108,7 +105,7 @@ export const Home = () => {
       </section>
 
       {/* ─── Stats Bar ─── */}
-      <section className="border-y border-border bg-card relative z-20 -mt-10 mx-6 md:mx-12 rounded-2xl shadow-2xl overflow-hidden">
+      <section className="border-y border-border bg-card relative mx-6 md:mx-12 rounded-2xl shadow-2xl overflow-hidden">
         <div className="absolute inset-0 bg-diagonal-hatching opacity-10 pointer-events-none" />
         <div className="container mx-auto px-6 py-12 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-y md:divide-y-0 md:divide-x divide-border rtl:divide-x-reverse">
