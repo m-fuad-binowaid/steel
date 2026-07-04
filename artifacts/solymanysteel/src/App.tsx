@@ -11,6 +11,7 @@ import { Projects } from '@/pages/Projects';
 import { Products } from '@/pages/Products';
 import { Partners } from '@/pages/Partners';
 import { Contact } from '@/pages/Contact';
+import { Quote } from '@/pages/Quote';
 
 function App() {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -29,6 +30,7 @@ function App() {
               <Route path="/products" component={Products} />
               <Route path="/partners" component={Partners} />
               <Route path="/contact" component={Contact} />
+              <Route path="/quote" component={Quote} />
               <Route>
                 <div className="flex-1 flex items-center justify-center pt-32 pb-16">
                   <h1 className="text-4xl font-black text-white">404 - Page Not Found</h1>

@@ -90,7 +90,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
+          <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border rtl:mr-4 rtl:pr-4 rtl:ml-0 rtl:pl-0 rtl:border-r rtl:border-l-0">
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-sm font-bold text-white hover:text-primary transition-colors cursor-pointer"
@@ -98,6 +98,11 @@ export const Navbar = () => {
               <Globe className="w-4 h-4" />
               {language === 'ar' ? 'EN' : 'عربي'}
             </button>
+            <Link href="/quote">
+              <span className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer whitespace-nowrap">
+                {language === 'ar' ? '📋 طلب تسعيرة' : '📋 Get Quote'}
+              </span>
+            </Link>
           </div>
         </div>
 
@@ -129,6 +134,13 @@ export const Navbar = () => {
                   </Link>
                 </div>
               ))}
+              <div className="border-b border-border/50 pb-4">
+                <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
+                  <span className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold text-xl w-full justify-center cursor-pointer">
+                    {language === 'ar' ? '📋 طلب تسعيرة' : '📋 Get Quote'}
+                  </span>
+                </Link>
+              </div>
               <div className="pt-4 flex flex-col gap-4">
                 <button
                   onClick={() => {
