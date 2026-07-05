@@ -2,7 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { MapPin, Truck, Clock, CheckCircle } from 'lucide-react';
+import { MapPin, Truck, Clock, CheckCircle, XCircle } from 'lucide-react';
+
+const HOURS = [
+  { day_ar: 'الأحد',    day_en: 'Sunday',    open: true  },
+  { day_ar: 'الاثنين',  day_en: 'Monday',    open: true  },
+  { day_ar: 'الثلاثاء', day_en: 'Tuesday',   open: true  },
+  { day_ar: 'الأربعاء', day_en: 'Wednesday', open: true  },
+  { day_ar: 'الخميس',   day_en: 'Thursday',  open: true  },
+  { day_ar: 'الجمعة',   day_en: 'Friday',    open: false },
+  { day_ar: 'السبت',    day_en: 'Saturday',  open: true  },
+];
 
 interface Region {
   name_ar: string;
@@ -200,6 +210,56 @@ export const Regions = () => {
             </div>
           ))}
         </div>
+
+        {/* Working Hours */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+          className="mb-12 bg-card border border-border rounded-2xl overflow-hidden"
+        >
+          <div className="flex items-center gap-3 px-6 py-4 border-b border-border bg-primary/5">
+            <Clock className="w-5 h-5 text-primary" />
+            <h2 className="font-black text-white text-lg">
+              {ar ? 'أوقات الدوام الرسمية' : 'Official Working Hours'}
+            </h2>
+          </div>
+          <div className="divide-y divide-border">
+            {HOURS.map((h) => (
+              <div
+                key={h.day_en}
+                className={`flex items-center justify-between px-6 py-3 ${!h.open ? 'bg-red-950/10' : 'hover:bg-white/[0.02]'} transition-colors`}
+              >
+                <span className={`font-bold text-sm ${!h.open ? 'text-muted-foreground' : 'text-white'}`}>
+                  {ar ? h.day_ar : h.day_en}
+                </span>
+                {h.open ? (
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm text-muted-foreground">
+                      {ar ? '٧ ص – ١٢ ظ' : '7:00 am – 12:00 pm'}
+                    </span>
+                    <span className="text-border text-xs">|</span>
+                    <span className="text-sm text-muted-foreground">
+                      {ar ? '٢ م – ٥ م' : '2:00 pm – 5:00 pm'}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-1.5 text-red-400">
+                    <XCircle className="w-3.5 h-3.5" />
+                    <span className="text-sm font-bold">{ar ? 'مغلق' : 'Closed'}</span>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="px-6 py-3 border-t border-border bg-background/40">
+            <p className="text-muted-foreground text-xs text-center">
+              {ar
+                ? 'يمكنك إرسال طلبك في أي وقت — سنتواصل معك خلال أوقات الدوام'
+                : 'You can submit a request anytime — we will follow up during business hours'}
+            </p>
+          </div>
+        </motion.div>
 
         {/* Regions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
