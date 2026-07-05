@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Plus, Trash2, Send, Package, ChevronDown } from 'lucide-react';
+import { saveQuote } from '@/lib/quotes';
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
@@ -150,6 +151,20 @@ export const Quote = () => {
     const errs = validate();
     if (errs.length > 0) { setErrors(errs); return; }
     setErrors([]);
+
+    // Save to local tracking dashboard
+    saveQuote({
+      name,
+      phone,
+      city,
+      notes,
+      products: rows.map((r) => ({
+        product: r.product,
+        brand: r.brand,
+        size: r.size,
+        qty: r.qty,
+      })),
+    });
 
     const msg = encodeURIComponent(buildMessage());
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');

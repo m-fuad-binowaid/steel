@@ -42,6 +42,9 @@ export const Navbar = () => {
     { name: t('nav.projects'), href: '/projects' },
     { name: t('nav.partners'), href: '/partners' },
     { name: t('nav.contact'), href: '/contact' },
+    { name: language === 'ar' ? '⚙️ حاسبة' : '⚙️ Calc', href: '/calculator' },
+    { name: language === 'ar' ? '❓ FAQ' : '❓ FAQ', href: '/faq' },
+    { name: language === 'ar' ? '🚚 التوصيل' : '🚚 Delivery', href: '/regions' },
   ];
 
   const toggleLanguage = () => {
