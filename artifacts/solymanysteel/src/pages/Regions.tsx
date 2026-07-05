@@ -11,14 +11,12 @@ interface Region {
   cities_en: string[];
   time_ar: string;
   time_en: string;
-  icon: string;
 }
 
 const REGIONS: Region[] = [
   {
     name_ar: 'منطقة الرياض',
     name_en: 'Riyadh Region',
-    icon: '🏙️',
     cities_ar: ['الرياض', 'الخرج', 'الدوادمي', 'المجمعة', 'الأفلاج', 'وادي الدواسر', 'الزلفي'],
     cities_en: ['Riyadh', 'Al-Kharj', 'Dawadmi', 'Al-Majmaah', 'Al-Aflaj', 'Wadi Al-Dawasir', 'Az-Zulfi'],
     time_ar: '٢٤ ساعة',
@@ -27,7 +25,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'المنطقة الشرقية',
     name_en: 'Eastern Province',
-    icon: '🛢️',
     cities_ar: ['الدمام', 'الخبر', 'الأحساء', 'الجبيل', 'حفر الباطن', 'القطيف', 'رأس تنورة'],
     cities_en: ['Dammam', 'Khobar', 'Al-Ahsa', 'Jubail', 'Hafar Al-Batin', 'Qatif', 'Ras Tanura'],
     time_ar: '٢٤-٤٨ ساعة',
@@ -36,7 +33,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة مكة المكرمة',
     name_en: 'Makkah Region',
-    icon: '🕋',
     cities_ar: ['جدة', 'مكة المكرمة', 'الطائف', 'رابغ', 'القنفذة', 'الليث', 'الجموم'],
     cities_en: ['Jeddah', 'Makkah', 'Taif', 'Rabigh', 'Al-Qunfudhah', 'Al-Lith', 'Al-Jumum'],
     time_ar: '٤٨-٧٢ ساعة',
@@ -45,7 +41,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة المدينة المنورة',
     name_en: 'Madinah Region',
-    icon: '🕌',
     cities_ar: ['المدينة المنورة', 'ينبع', 'العُلا', 'خيبر', 'بدر', 'مهد الذهب'],
     cities_en: ['Madinah', 'Yanbu', "Al-Ula", 'Khaybar', 'Badr', 'Mahad Al-Dahab'],
     time_ar: '٤٨-٧٢ ساعة',
@@ -54,7 +49,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة القصيم',
     name_en: 'Al-Qassim Region',
-    icon: '🌾',
     cities_ar: ['بريدة', 'عنيزة', 'الرس', 'المذنب', 'البدائع', 'الشماسية'],
     cities_en: ['Buraydah', 'Unaizah', 'Ar-Rass', 'Al-Mudhnab', 'Al-Badai', 'Ash-Shimasiyah'],
     time_ar: '٢٤-٤٨ ساعة',
@@ -63,7 +57,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة حائل',
     name_en: 'Hail Region',
-    icon: '🏔️',
     cities_ar: ['حائل', 'بقعاء', 'الغزالة', 'السليمي'],
     cities_en: ['Hail', "Buq'a", 'Al-Ghazalah', 'Al-Sulaimi'],
     time_ar: '٤٨-٧٢ ساعة',
@@ -72,7 +65,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة تبوك',
     name_en: 'Tabuk Region',
-    icon: '🏜️',
     cities_ar: ['تبوك', 'الوجه', 'أملج', 'ضباء', 'تيماء'],
     cities_en: ['Tabuk', 'Al-Wajh', 'Umluj', 'Duba', 'Tayma'],
     time_ar: '٣-٥ أيام',
@@ -81,7 +73,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة عسير',
     name_en: 'Aseer Region',
-    icon: '⛰️',
     cities_ar: ['أبها', 'خميس مشيط', 'بيشة', 'محايل', 'النماص', 'رجال ألمع'],
     cities_en: ['Abha', 'Khamis Mushait', 'Bisha', 'Muhayil', 'An-Namas', 'Rijal Alma'],
     time_ar: '٣-٥ أيام',
@@ -90,7 +81,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة جازان',
     name_en: 'Jizan Region',
-    icon: '🌊',
     cities_ar: ['جازان', 'صبيا', 'أبو عريش', 'صامطة', 'العارضة'],
     cities_en: ['Jizan', 'Sabya', 'Abu Arish', 'Samtah', 'Al-Aridah'],
     time_ar: '٣-٥ أيام',
@@ -99,7 +89,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة نجران',
     name_en: 'Najran Region',
-    icon: '🌿',
     cities_ar: ['نجران', 'شرورة', 'حبونا', 'ثار'],
     cities_en: ['Najran', 'Sharurah', 'Hubuna', 'Thar'],
     time_ar: '٣-٥ أيام',
@@ -108,7 +97,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة الباحة',
     name_en: 'Al-Bahah Region',
-    icon: '🌲',
     cities_ar: ['الباحة', 'بلجرشي', 'المندق', 'العقيق'],
     cities_en: ['Al-Bahah', 'Baljurashi', 'Al-Mandiq', 'Al-Aqiq'],
     time_ar: '٣-٥ أيام',
@@ -117,7 +105,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'منطقة الجوف',
     name_en: 'Al-Jawf Region',
-    icon: '🌴',
     cities_ar: ['سكاكا', 'القريات', 'دومة الجندل', 'طبرجل'],
     cities_en: ['Sakaka', 'Al-Qurayyat', 'Dumat Al-Jandal', 'Tabarjal'],
     time_ar: '٣-٥ أيام',
@@ -126,7 +113,6 @@ const REGIONS: Region[] = [
   {
     name_ar: 'الحدود الشمالية',
     name_en: 'Northern Borders',
-    icon: '🏕️',
     cities_ar: ['عرعر', 'رفحاء', 'طريف'],
     cities_en: ["Ar'ar", 'Rafha', 'Turaif'],
     time_ar: '٣-٥ أيام',
@@ -143,7 +129,6 @@ const RegionCard = ({ region, ar, index }: { region: Region; ar: boolean; index:
   >
     <div className="flex items-start justify-between mb-3">
       <div>
-        <span className="text-2xl mb-2 block">{region.icon}</span>
         <h3 className="font-black text-white text-lg group-hover:text-primary transition-colors">
           {ar ? region.name_ar : region.name_en}
         </h3>
@@ -226,7 +211,7 @@ export const Regions = () => {
         {/* Note */}
         <div className="mt-10 bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
           <p className="text-primary font-bold text-lg mb-2">
-            {ar ? '🚚 أسعار الشحن تُحدد حسب المنطقة والكمية' : '🚚 Shipping rates vary by region and quantity'}
+            {ar ? 'أسعار الشحن تُحدد حسب المنطقة والكمية' : 'Shipping rates vary by region and quantity'}
           </p>
           <p className="text-muted-foreground">
             {ar
@@ -235,7 +220,7 @@ export const Regions = () => {
           </p>
           <Link href="/quote">
             <span className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold mt-4 transition-all shadow-lg shadow-primary/20 cursor-pointer">
-              {ar ? '📋 طلب تسعيرة مع توصيل' : '📋 Request Quote with Delivery'}
+              {ar ? 'طلب تسعيرة مع توصيل' : 'Request Quote with Delivery'}
             </span>
           </Link>
         </div>

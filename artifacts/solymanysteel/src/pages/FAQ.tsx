@@ -168,12 +168,12 @@ export const FAQ = () => {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact">
               <span className="inline-flex items-center justify-center gap-2 border border-border text-white hover:border-primary/40 px-6 py-3 rounded-xl font-bold transition-all cursor-pointer">
-                {ar ? '📞 اتصل بنا' : '📞 Contact Us'}
+                {ar ? 'اتصل بنا' : 'Contact Us'}
               </span>
             </Link>
             <Link href="/quote">
               <span className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer">
-                {ar ? '📋 طلب تسعيرة' : '📋 Request a Quote'}
+                {ar ? 'طلب تسعيرة' : 'Request a Quote'}
               </span>
             </Link>
           </div>

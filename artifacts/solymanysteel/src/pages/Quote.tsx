@@ -122,14 +122,14 @@ export const Quote = () => {
   // ── Build WhatsApp message ────────────────────────────────────────────────
   const buildMessage = () => {
     const header = ar
-      ? `🏗️ *طلب تسعيرة جديد — السليماني للحديد*\n${'━'.repeat(30)}`
-      : `🏗️ *New Quote Request — Al Solyymany Steel*\n${'━'.repeat(30)}`;
+      ? `*طلب تسعيرة جديد — السليماني للحديد*\n${'━'.repeat(30)}`
+      : `*New Quote Request — Al Solyymany Steel*\n${'━'.repeat(30)}`;
 
     const info = ar
-      ? `👤 *الاسم:* ${name}\n📱 *الجوال:* ${phone}${city ? `\n📍 *المدينة:* ${city}` : ''}`
-      : `👤 *Name:* ${name}\n📱 *Phone:* ${phone}${city ? `\n📍 *City:* ${city}` : ''}`;
+      ? `*الاسم:* ${name}\n*الجوال:* ${phone}${city ? `\n*المدينة:* ${city}` : ''}`
+      : `*Name:* ${name}\n*Phone:* ${phone}${city ? `\n*City:* ${city}` : ''}`;
 
-    const productHeader = ar ? '\n📦 *المنتجات المطلوبة:*' : '\n📦 *Requested Products:*';
+    const productHeader = ar ? '\n*المنتجات المطلوبة:*' : '\n*Requested Products:*';
 
     const productLines = rows.map((r, i) => {
       const prod  = PRODUCTS.find((p) => p.id === r.product);
@@ -138,10 +138,10 @@ export const Quote = () => {
     }).join('\n');
 
     const notesLine = notes.trim()
-      ? `\n📝 *${ar ? 'ملاحظات' : 'Notes'}:* ${notes}`
+      ? `\n*${ar ? 'ملاحظات' : 'Notes'}:* ${notes}`
       : '';
 
-    const footer = `\n${'━'.repeat(30)}\n🌐 ${ar ? 'أُرسل من موقع السليماني للحديد' : 'Sent from solymanysteel.com'}`;
+    const footer = `\n${'━'.repeat(30)}\n${ar ? 'أُرسل من موقع السليماني للحديد' : 'Sent from solymanysteel.com'}`;
 
     return `${header}\n\n${info}${productHeader}\n${productLines}${notesLine}${footer}`;
   };

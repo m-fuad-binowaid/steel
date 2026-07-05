@@ -12,8 +12,8 @@ export const WhatsAppFloat = () => {
   const handleClick = () => {
     const msg = encodeURIComponent(
       ar
-        ? 'السلام عليكم، أريد الاستفسار عن منتجاتكم وأسعارها 🏗️'
-        : 'Hello, I would like to inquire about your products and prices 🏗️'
+        ? 'السلام عليكم، أريد الاستفسار عن منتجاتكم وأسعارها'
+        : 'Hello, I would like to inquire about your products and prices'
     );
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank');
   };

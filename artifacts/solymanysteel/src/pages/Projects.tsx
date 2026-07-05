@@ -90,7 +90,7 @@ export const Projects = () => {
                     {language === 'ar' ? project.nameAr : project.nameEn}
                   </h3>
                   <p className="text-muted-foreground text-sm font-medium">
-                    📍 {language === 'ar' ? project.locationAr : project.locationEn}
+                    {language === 'ar' ? project.locationAr : project.locationEn}
                   </p>
                 </div>
               </motion.div>

@@ -42,9 +42,9 @@ export const Navbar = () => {
     { name: t('nav.projects'), href: '/projects' },
     { name: t('nav.partners'), href: '/partners' },
     { name: t('nav.contact'), href: '/contact' },
-    { name: language === 'ar' ? '⚙️ حاسبة' : '⚙️ Calc', href: '/calculator' },
-    { name: language === 'ar' ? '❓ FAQ' : '❓ FAQ', href: '/faq' },
-    { name: language === 'ar' ? '🚚 التوصيل' : '🚚 Delivery', href: '/regions' },
+    { name: language === 'ar' ? 'حاسبة' : 'Calc', href: '/calculator' },
+    { name: 'FAQ', href: '/faq' },
+    { name: language === 'ar' ? 'التوصيل' : 'Delivery', href: '/regions' },
   ];
 
   const toggleLanguage = () => {
@@ -103,7 +103,7 @@ export const Navbar = () => {
             </button>
             <Link href="/quote">
               <span className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 cursor-pointer whitespace-nowrap">
-                {language === 'ar' ? '📋 طلب تسعيرة' : '📋 Get Quote'}
+                {language === 'ar' ? 'طلب تسعيرة' : 'Get Quote'}
               </span>
             </Link>
           </div>
@@ -140,7 +140,7 @@ export const Navbar = () => {
               <div className="border-b border-border/50 pb-4">
                 <Link href="/quote" onClick={() => setIsMobileMenuOpen(false)}>
                   <span className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-xl font-bold text-xl w-full justify-center cursor-pointer">
-                    {language === 'ar' ? '📋 طلب تسعيرة' : '📋 Get Quote'}
+                    {language === 'ar' ? 'طلب تسعيرة' : 'Get Quote'}
                   </span>
                 </Link>
               </div>

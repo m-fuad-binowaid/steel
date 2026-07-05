@@ -122,7 +122,7 @@ const QuoteCard = ({
 
       {record.notes && (
         <p className="text-muted-foreground text-sm bg-background/50 rounded-xl px-3 py-2 mb-4 border border-border/40">
-          📝 {record.notes}
+          {record.notes}
         </p>
       )}
 
@@ -153,7 +153,7 @@ const QuoteCard = ({
           rel="noopener noreferrer"
           className="mr-auto text-xs px-3 py-1.5 rounded-lg border border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/10 transition-colors font-bold"
         >
-          💬 {ar ? 'رد عبر واتساب' : 'Reply on WhatsApp'}
+          {ar ? 'رد عبر واتساب' : 'Reply on WhatsApp'}
         </a>
       </div>
     </motion.div>

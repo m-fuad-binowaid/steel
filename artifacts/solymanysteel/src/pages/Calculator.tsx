@@ -356,7 +356,7 @@ export const Calculator = () => {
             </button>
             <Link href="/quote" className="flex-1">
               <span className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold transition-all shadow-lg shadow-primary/20 cursor-pointer w-full">
-                {ar ? '📋 اطلب تسعيرة بهذه الكمية' : '📋 Request a Quote for This Quantity'}
+                {ar ? 'اطلب تسعيرة بهذه الكمية' : 'Request a Quote for This Quantity'}
               </span>
             </Link>
           </div>
