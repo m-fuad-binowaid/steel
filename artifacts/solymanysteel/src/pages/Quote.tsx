@@ -31,7 +31,7 @@ const SIZES: Record<string, string[]> = {
   bars:   ['10 مم','12 مم','16 مم','20 مم','25 مم','32 مم','40 مم'],
 };
 
-const WHATSAPP_NUMBER = '966555095344';
+const WHATSAPP_NUMBER = '966559955630';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -121,29 +121,28 @@ export const Quote = () => {
 
   // ── Build WhatsApp message ────────────────────────────────────────────────
   const buildMessage = () => {
-    const header = ar
-      ? `*طلب تسعيرة جديد — السليماني للحديد*\n${'━'.repeat(30)}`
-      : `*New Quote Request — Al Solyymany Steel*\n${'━'.repeat(30)}`;
+    const lines: string[] = [];
 
-    const info = ar
-      ? `*الاسم:* ${name}\n*الجوال:* ${phone}${city ? `\n*المدينة:* ${city}` : ''}`
-      : `*Name:* ${name}\n*Phone:* ${phone}${city ? `\n*City:* ${city}` : ''}`;
+    lines.push(ar ? '*طلب تسعيرة — السليماني للحديد*' : '*Quote Request — Al Solyymany Steel*');
+    lines.push('');
+    lines.push(`${ar ? 'الاسم' : 'Name'}: ${name}`);
+    lines.push(`${ar ? 'الجوال' : 'Phone'}: ${phone}`);
+    if (city) lines.push(`${ar ? 'المدينة' : 'City'}: ${city}`);
+    lines.push('');
+    lines.push(ar ? '*الطلب:*' : '*Order:*');
 
-    const productHeader = ar ? '\n*المنتجات المطلوبة:*' : '\n*Requested Products:*';
-
-    const productLines = rows.map((r, i) => {
+    rows.forEach((r, i) => {
       const prod  = PRODUCTS.find((p) => p.id === r.product);
       const brand = BRANDS.find((b) => b.id === r.brand);
-      return `${i + 1}. ${ar ? prod?.ar : prod?.en} | ${ar ? brand?.ar : brand?.en} | ${ar ? 'قياس' : 'Size'}: ${r.size} | ${r.qty} ${ar ? 'طن' : 'ton'}`;
-    }).join('\n');
+      lines.push(`${i + 1}. ${ar ? prod?.ar : prod?.en} – ${ar ? brand?.ar : brand?.en} – ${r.size} – ${r.qty} ${ar ? 'طن' : 'ton'}`);
+    });
 
-    const notesLine = notes.trim()
-      ? `\n*${ar ? 'ملاحظات' : 'Notes'}:* ${notes}`
-      : '';
+    if (notes.trim()) {
+      lines.push('');
+      lines.push(`${ar ? 'ملاحظة' : 'Note'}: ${notes.trim()}`);
+    }
 
-    const footer = `\n${'━'.repeat(30)}\n${ar ? 'أُرسل من موقع السليماني للحديد' : 'Sent from solymanysteel.com'}`;
-
-    return `${header}\n\n${info}${productHeader}\n${productLines}${notesLine}${footer}`;
+    return lines.join('\n');
   };
 
   // ── Submit ───────────────────────────────────────────────────────────────
