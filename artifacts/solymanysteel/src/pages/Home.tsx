@@ -202,9 +202,9 @@ export const Home = () => {
                 {t('contact.desc')}
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                <a href="tel:0500729313" className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all w-full sm:w-auto justify-center">
+                <a href="tel:0506324423" className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all w-full sm:w-auto justify-center">
                   <Phone className="w-5 h-5" />
-                  <span dir="ltr">0500 729 313</span>
+                  <span dir="ltr">0506 324 423</span>
                 </a>
                 <Link href="/contact">
                   <span className="inline-flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-8 py-4 rounded-xl font-bold transition-all w-full sm:w-auto justify-center cursor-pointer">

@@ -49,8 +49,7 @@ export const Contact = () => {
                   <div>
                     <h3 className="text-white font-bold mb-1">{t('contact.phone.label')}</h3>
                     <div className="flex flex-col gap-1">
-                      <a href="tel:0500729313" className="text-muted-foreground hover:text-primary transition-colors inline-block text-left" dir="ltr">0500 729 313</a>
-                      <a href="tel:0500728912" className="text-muted-foreground hover:text-primary transition-colors inline-block text-left" dir="ltr">0500 728 912</a>
+                      <a href="tel:0506324423" className="text-muted-foreground hover:text-primary transition-colors inline-block text-left" dir="ltr">0506 324 423</a>
                     </div>
                   </div>
                 </div>
@@ -70,7 +69,7 @@ export const Contact = () => {
 
               <div className="mt-12 pt-8 border-t border-border">
                 <a 
-                  href="https://wa.me/966500729313" 
+                  href="https://wa.me/966506324423" 
                   target="_blank" 
                   rel="noreferrer"
                   className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20bd5a] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 hover:-translate-y-1"

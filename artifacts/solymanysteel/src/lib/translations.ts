@@ -23,7 +23,7 @@ export const translations = {
     "stats.qual.label": "جودة معتمدة",
 
     "home.cta.title": "تواصل معنا الآن",
-    "home.cta.phone": "0500729313",
+    "home.cta.phone": "0506324423",
 
     "about.title": "من نحن",
     "about.desc": "مؤسسة سعيد السليماني للحديد الجديد هوية سعودية ورؤية مختلفة بدأت فكرة منذ زمن بعيد لرسم صورة لمستقبل ناجح في مجال التجارة والصناعة والغذاء والمقاولات والنقل. ومن هنا بدأت المؤسسة تثبت وجودها، بفضل الله، في عالم التجارة والصناعة والمقاولات والنقل، معتمدةً على آلية تنظيمية متقدمة وتخطيط سليم قائم على هيكل تنظيمي أوصلها إلى التميز في مجالات النشاط المذكورة.",
@@ -107,7 +107,7 @@ export const translations = {
     "stats.qual.label": "Certified Quality",
 
     "home.cta.title": "Contact Us Now",
-    "home.cta.phone": "0500729313",
+    "home.cta.phone": "0506324423",
 
     "about.title": "About Us",
     "about.desc": "Saeed Al Sulaiman Iron Establishment is a Saudi identity and a different vision that began as an idea a long time ago to draw pictures of a successful future in the field of trade, industry, food, contracting and transportation. From here, the Establishment began to establish itself, thanks to God Almighty, in the world of trade, industry, food, contracting and transportation, relying on an advanced organizational mechanism and sound planning based on an organizational structure that led it to excel in these fields.",

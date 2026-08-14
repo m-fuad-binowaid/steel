@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_NUMBER = '966555095344';
+const WHATSAPP_NUMBER = '966506324423';
 
 export const WhatsAppFloat = () => {
   const { language } = useLanguage();
